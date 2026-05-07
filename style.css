@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CoolFont';
+    src: url ('founts\CoolFount.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CoolFount', sans-serif;
+    
+}
