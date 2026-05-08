@@ -1,11 +1,17 @@
 @font-face {
-    font-family: 'Ormlou';
-    src: url(font\OrmoluPersonalUse-BLAdV.ttf) format('truetype');
+    font-family: 'CoolFont';
+    src: url(fonts/CoolFont.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: "Ormlou";
+    src: url(fonts/Ormolu.ttf) format('truetype');
 }
 
 body {
-    font-family: 'Ormlou', sans-serif;
-    background-color : rgb(202, 200, 200);
+    font-family: 'CoolFont', sans-serif;
+    background-color : rgb(251, 250, 250);
     
 }
 
@@ -15,6 +21,7 @@ div.Roles {
     border-radius: 15px;
     padding: 15px;
     width: 250px;
+    
 }
 
 div.Roles h3 {
@@ -25,4 +32,17 @@ div.Roles h3 {
 h1.Title {
     text-align: center;
     font-family: 'Ormlou', sans-serif;
+    
+}
+
+div.Topic {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+div.Roles,
+div.Topic {
+    margin: 20px auto;
+    
+    
 }
