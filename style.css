@@ -1,9 +1,28 @@
 @font-face {
-    font-family: 'CoolFont';
-    src: url ('founts\CoolFount.ttf') format('truetype');
+    font-family: 'Ormlou';
+    src: url(font\OrmoluPersonalUse-BLAdV.ttf) format('truetype');
 }
 
 body {
-    font-family: 'CoolFount', sans-serif;
+    font-family: 'Ormlou', sans-serif;
+    background-color : rgb(202, 200, 200);
     
+}
+
+div.Roles {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+}
+
+div.Roles h3 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+h1.Title {
+    text-align: center;
+    font-family: 'Ormlou', sans-serif;
 }
