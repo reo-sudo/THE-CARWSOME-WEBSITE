@@ -46,3 +46,19 @@ div.Topic {
     
     
 }
+
+button {
+    background:rgb(255, 255, 255);
+    padding:  10px 20px;
+    font-family: "CoolFont";
+    border-radius: 12px;
+    cursor: pointer;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color:rgb(217, 217, 217);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
