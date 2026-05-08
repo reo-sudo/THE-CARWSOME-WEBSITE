@@ -9,25 +9,142 @@
     src: url(fonts/Ormolu.ttf) format('truetype');
 }
 
+
+
+:root {
+    --ink: #1a1a2e;
+    --paper: #fdf8f0;
+    --paper-dark: #f5edd8;
+    --accent-yellow: #ffe066;
+    --accent-pink: #ffb3c6;
+    --accent-blue: #b3d9ff;
+    --accent-green: #b8f0c8;
+    --accent-oragnge: #ffd4a3;
+    --line-color: #c8b89a;
+    --shadow: rgba(0, 0, 0, 0.12);
+
+}
+
+/* BASE AREA */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'CoolFont', sans-serif;
-    background-color : rgb(251, 250, 250);
+    background-color: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+    /* line paper background */
+    background-image:
+        repeating-linear-gradient(
+            transparent,
+            transparent 27px,
+            var(--line-color) 28px
+        ),
+        linear-gradient(to right, transparent 60px, #f0c0c0 61px, transparent 62px);
+    background-size: 100% 28%, 100% 100%;
     
+}
+
+
+
+header {
+    text-align: center;
+    padding: 40px 20px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.title-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+h1.Title {
+    font-family: 'Permanet Marker', 'Ormlou';
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    color: var(--lnk);
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+
+    background: linear-gradient(transparent, 55% var(--accent-yellow) 55%);
+    display: inline;
+    padding: 0 6px;
+    line-height: 1.4;
+}
+
+.scibble-underline {
+    height: 6px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='8'%3E%3Cpath d='M0,4 Q25,1 50,4 T100,4 T150,4 T200,4' stroke='%231a1a2e' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x center;
+    background-size: 200px 8px;
+    margin: 4px 0;
+    opacity: 0.4;
+}
+
+.scribble-underline.flip {
+    transform: scaleY(-1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 6px;
+    letter-spacing: 1px;
 }
 
 div.Roles {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 15px;
-    width: 250px;
+    background-color: var(--accent-green);
+    border: 3px solid var(--ink);
+    border-radius: 2px 15px 3px 14px / 14px 3px 15px 2px;
+    padding: 16px 20px;
+    width: fit-content;
+    margin: 24px auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: 4px 4px 0px var(--ink);
+    transform: rotate(-0.8deg);
+    transition: transform 0.2s ease;
     
 }
 
-div.Roles h3 {
-    text-align: center;
-    color: rgb(0, 0, 0);
+div.Roles:hover {
+    transform: rotate(0deg) scale(1.02);
 }
+
+div.Roles h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--ink);
+    border-bottom: 2px dashed var(--ink);
+    padding-bottom: 6px;
+}
+
+
+div.Roles p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.role-tag {
+    font-weight: 700;
+    background: rgba(125, 203, 125, 0.5);
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-right: 4px;
+}
+
+
 
 h1.Title {
     text-align: center;
@@ -35,9 +152,70 @@ h1.Title {
     
 }
 
+div.mainLayout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 20px 24px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+div.topicColume {
+    display: flex;
+    flex-direction: column;
+    flex: 1px;
+    gap: 20px;
+}
+
+
 div.Topic {
-    border: 2px solid black;
-    border-radius: 15px;
+    border: 3px solid black;
+    border-radius: 4px 16px 4px 16px / 16px 4px 16px 4px;
+    padding: 20px 24px;
+    background: var(--paper-dark);
+    box-shadow: 5px 5px 0px var(--ink);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+
+div.Topic:nth-child(1) {
+    background: var(--accent-pink);
+    transform: rotate(0.4deg);
+}
+
+div.Topic:nth-child(2) {
+    background: var(--accent-blue);
+    transform: rotate(-0.3deg);
+}
+
+div.Topic:hover {
+    transform: rotate(0deg) translate(-3px, -3px) !important;
+    box-shadow: 8px 8px 0px var(--ink);
+}
+
+div.Topic h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed var(--ink);
+    color: var(--ink);
+}
+
+.topic-num {
+    font-family: 'Ormlou', 'Permanet Marker';
+    font-size: 1.1rem;
+    opacity: 0.5;
+    margin-right: 6px;
+}
+
+div.Topic p {
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: #2a2a2a;
 }
 
 div.Roles,
@@ -47,31 +225,79 @@ div.Topic {
     
 }
 
+div.buttonArea {
+    border: 3px soild var(--ink);
+    border-radius: 3px 14px 14px 3px / 14px 3px 3px 14px;
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 10px;
+    background: var(--accent-blue);
+    box-shadow: 4px 4px 0px var(--ink);
+    transform: rotate(0.5deg);
+}
+
+.btnLabel {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+
 button {
-    background:rgb(255, 255, 255);
-    padding:  10px 20px;
+    background: var(--paper);
+    padding:  8px 12px;
     font-family: "CoolFont";
-    border-radius: 12px;
+    font-size: 0.85rem;
+    border-radius: 2px 10px 2px 10px / 10px 2px 10px 2px;
     cursor: pointer;
-    
-    transition: all 0.2s ease-in-out;
+    margin: 2px;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 2px 2px 0px var(--ink);
+    text-align: left;
+    width: 100%;
 }
 
 button:hover {
-    background-color:rgb(217, 217, 217);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    background-color: var(--accent-yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px var(--ink);
+}
+
+button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--ink);
 }
 
 button.funnyb {
-    margin: 20px; 
+    background: var(--accent-oragnge);
+    font-size: 0.8rem;
+    border-style: dashed;
+}
 
+button.funnyb:hover {
+    background: #ffaa44;
 }
 
 img.memeimg {
     display: block;
     margin: 20px auto;
     max-width: 100%;
+    
+    
+}
+
+div.buttonArea {
+    
+    border: solid black 2px;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 120px;
+    
+    
     
     
 }
