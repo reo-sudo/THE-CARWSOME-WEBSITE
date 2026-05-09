@@ -9,7 +9,7 @@
 <body>
 
     
-
+   
     
     <header>
         <div class="title-wrapper">
@@ -20,6 +20,9 @@
         <p class="subtitle">~AI cars are Awsome~</p>
     </header>
         
+     <div class="WelcomeArea">
+        <h2 class="WelcomeText", id="WelcomeText"> </h2>
+    </div>
 
     <div class="Roles">
             <h3>📋 Roles</h3>
@@ -54,6 +57,15 @@
         </div>
     
     </div>
+
+    <script>
+
+        let username = localStorage.getItem("username");
+
+        document.getElementById("WelcomeText").innerText =
+            "Welcome! " + username;
+
+    </script>
 
 
 

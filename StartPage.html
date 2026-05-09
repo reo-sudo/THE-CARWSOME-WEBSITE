@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="title-wrapper">
+            <div class="scribble-underLine"></div>
+            <h1 class="Title">Before You Proceed </h1>
+            <div class="scribble-underLine"></div>
+        </div>
+        <p class="subtitle">~Please Enter and Answer these Questions ~</p>
+    </header>
+
+    <div class="Login">
+        <p class="LoginLabel">Enter your name to continue:</p>
+        <input class="LoginInput" type="text" placeholder="username" name="username">
+        <a class="backButton" href="main.html" onClick="SaveUserName()">Continue</a> 
+    </div>
+
+    <script>
+        function SaveUserName() {
+            let username = 
+                document.querySelector('.LoginInput').value;
+
+            localStorage.setItem("username", username);
+        }
+        
+    </script>
+    
+</body>
+</html>
