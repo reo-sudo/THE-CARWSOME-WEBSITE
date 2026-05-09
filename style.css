@@ -9,6 +9,11 @@
     src: url(fonts/Ormolu.ttf) format('truetype');
 }
 
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
 
 :root {
@@ -69,6 +74,7 @@ header {
 }
 
 h1.Title {
+    user-select: none;
     font-family: 'Permanet Marker', 'Ormlou';
     font-size: clamp(2.2rem, 6vw, 4rem);
     color: var(--lnk);
@@ -82,19 +88,20 @@ h1.Title {
     line-height: 1.4;
 }
 
-.scibble-underline {
+.scribble-underLine {
     height: 6px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='8'%3E%3Cpath d='M0,4 Q25,1 50,4 T100,4 T150,4 T200,4' stroke='%231a1a2e' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x center;
-    background-size: 200px 8px;
-    margin: 4px 0;
-    opacity: 0.4;
+    background: url("images/scribble-underline.webp") no-repeat center;
+    opacity: 0.5;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+
+  
 }
 
-.scribble-underline.flip {
-    transform: scaleY(-1);
-}
 
 .subtitle {
+    user-select: none;
     font-size: 1.2rem;
     color: #888;
     margin-top: 6px;
@@ -102,6 +109,7 @@ h1.Title {
 }
 
 div.Roles {
+    user-select: none;
     background-color: var(--accent-green);
     border: 3px solid var(--ink);
     border-radius: 2px 15px 3px 14px / 14px 3px 15px 2px;
@@ -153,6 +161,7 @@ h1.Title {
 }
 
 div.mainLayout {
+    user-select: none;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -171,6 +180,7 @@ div.topicColume {
 
 
 div.Topic {
+    user-select: none;
     border: 3px solid black;
     border-radius: 4px 16px 4px 16px / 16px 4px 16px 4px;
     padding: 20px 24px;
@@ -226,6 +236,7 @@ div.Topic {
 }
 
 div.buttonArea {
+    user-select: none;
     border: 3px soild var(--ink);
     border-radius: 3px 14px 14px 3px / 14px 3px 3px 14px;
     width: 160px;
@@ -283,6 +294,8 @@ button.funnyb:hover {
 }
 
 img.memeimg {
+    user-select: none;
+    -webkit-user-drag: none;
     display: block;
     margin: 20px;
     max-width: 25%;
@@ -292,6 +305,7 @@ img.memeimg {
 }
 
 img.memeimg:hover {
+    user-select: none;
     transform: translate( -2px, 5px);
     transform: rotate(5deg);
 }
@@ -309,6 +323,8 @@ div.buttonArea {
 }
 
 a.backButton {
+    user-select: none;
+    -webkit-user-drag: none;
     display: inline-block;
     margin: 20px;
     padding: 8px 12px;
@@ -322,6 +338,7 @@ a.backButton {
 }
 
 a.backButton:hover {
+    user-select: none;
     background: var(--accent-yellow);
     transform: translate( 2px, -2px);
     box-shadow: 4px 4px 0px var(--ink); 
@@ -335,5 +352,9 @@ video.frogvid {
     border-radius: 10px 20px 10px 20px / 20px 10px 20px 10px;
 
     
+}
+
+.p {
+    user-select: none;
 }
    
