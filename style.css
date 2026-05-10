@@ -542,3 +542,20 @@ h2 {
     from {transform: translateY(0); }
     to {transform: translateY(-7px); }
 }
+
+
+.FavColor {
+    text-decoration: none;
+    border: solid var(--ink);
+    border-radius: 10px 1px 15px 6px / 1px 10px 5px;
+    box-shadow: 1px 0.5px 1px;
+    padding: 15px 2px;
+    position: relative;
+    width: fit-content;
+    background-color: var(--paper-dark);
+    margin: 20px auto;
+
+
+
+
+}
