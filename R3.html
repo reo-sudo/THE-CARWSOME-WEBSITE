@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="page-loader">
+        <div class="loader-box">Vroom...</div>
+        <div class="loader-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
     
     <header>
         <div class="title-wrapper">
@@ -35,6 +42,29 @@
 
     <a class="backButton" href="main.html">Back</a>
    
+    <script>
+
+        window.addEventListener('load', () => {
+                const loader = document.getElementById('page-loader');
+                setTimeout(() => {
+                    loader.classList.add('fade-out');
+                    setTimeout(() => loader.remove(), 300);
+                }, 500)
+            });
+
+            document.querySelectorAll('a, button[onclick]').forEach(el => {
+                el.addEventListener('click', () => {
+                    const loader = document.createElement('div');
+                    loader.id = 'page-loader';
+                    loader.innerHTML = `
+                    <div class="loader-box">Vroom...</div>
+                    <div class="loader-dots"><span></span><span></span><span></span></div>
+                    `;
+                    document.body.appendChild(loader);
+                });
+            });
+
+    </script>
     
 </body>
 </html>
