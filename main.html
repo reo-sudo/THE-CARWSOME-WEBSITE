@@ -14,14 +14,33 @@
     <header>
         <div class="title-wrapper">
             <div class="scribble-underLine"></div>
+            
             <h1 class="Title">Autonomous Vehicles</h1>
             <div class="scribble-underLine"></div>
         </div>
         <p class="subtitle">~AI cars are Awsome~</p>
     </header>
         
-     <div class="WelcomeArea">
-        <h2 class="WelcomeText", id="WelcomeText"> </h2>
+    <div class="topbar">  
+        
+        <div class="Circle" onClick="SettingsMenu()">
+            <img  class="SettingsImg" src="images/2035350-200.png">
+        </div> 
+        
+        
+        <div class="WelcomeArea">
+            <h2 class="WelcomeText" id="WelcomeText"> </h2>
+        </div>
+
+        
+    </div>
+        
+
+   
+
+    <div class="Settings-Menu" id="SettingsMenu">
+        <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
+        <button onClick="Frog()">No Frog Button(i don't like frogs)</button>
     </div>
 
     <div class="Roles">
@@ -36,7 +55,7 @@
     <div class="mainLayout">
         <div class="buttonArea">
             <p class="btnLabel">~Pages~</p>
-            <button class="funnyb" type="button" onclick="window.location.href='gerald.html'">do not click me heheh 🐸</button> 
+            <button class="funnyb" id="FrogButton" type="button" onclick="window.location.href='gerald.html'">do not click me heheh 🐸</button> 
             <button type="button" onclick="window.location.href='research.html'">NEXT</button>
             <button type="button" onclick="window.location.href='R2.html'">MORE</button>
             <button type="button" onclick="window.location.href='R3.html'">HMMM</button>
@@ -65,11 +84,20 @@
         document.getElementById("WelcomeText").innerText =
             "Welcome! " + username;
 
+
+            function SettingsMenu() {
+               document.getElementById('SettingsMenu').classList.toggle('open');
+               
+            }
+
+            function Frog() {
+            document.getElementById('FrogButton').style.display = "none";
+            }
     </script>
 
 
 
      
-</body>
+
 </body>
 </html>
