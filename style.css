@@ -548,14 +548,63 @@ h2 {
     text-decoration: none;
     border: solid var(--ink);
     border-radius: 10px 1px 15px 6px / 1px 10px 5px;
-    box-shadow: 1px 0.5px 1px;
-    padding: 15px 2px;
+    box-shadow: 1px 2px 1px;
     position: relative;
     width: fit-content;
     background-color: var(--paper-dark);
     margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+
+}
 
 
+.CircleA {
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-blue);
+    border: solid var(--ink); 
+    border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%;
+    transform: rotate(-3deg);
+    transition: border-radius 0.3s ease, transform 0.3s ease;
+    box-shadow: 3px 1px 1px var(--ink);
+    cursor: pointer;
+    
+}
+
+.CircleA:hover {
+    background-color:#505cc9;
+    transform: translate(-2px, -2px);
+    box-shadow: 3.5px 1.2px 1px var(--ink);
+}
+
+
+.CircleB {
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-green);
+    border: solid var(--ink); 
+    border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%;
+    transform: rotate(-3deg);
+    transition: border-radius 0.3s ease, transform 0.3s ease;
+    box-shadow: 3px 1px 1px var(--ink);
+    cursor: pointer;
+}
+
+.CircleB:hover {
+    background-color:#409753;
+    transform: translate(-2px, -2px);
+    box-shadow: 3.5px 1.2px 1px var(--ink);
+}
+
+.ColorSelect {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 25px;
+    margin: 20px auto;
 
 
 }
