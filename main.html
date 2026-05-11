@@ -43,7 +43,7 @@
 
     <div class="Settings-Menu" id="SettingsMenu">
         <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
-        <button onClick="Frog()">No Frog Button(i don't like frogs)</button>
+        <button class="no-loader" onClick="Frog()">No Frog Button(i don't like frogs)</button>
     </div>
 
     <div class="Roles">
@@ -110,7 +110,7 @@
                 }, 1000)
             });
 
-            document.querySelectorAll('a, button[onclick]').forEach(el => {
+            document.querySelectorAll('a, button[onclick]:not(.no-loader)').forEach(el => {
                 el.addEventListener('click', () => {
                     const loader = document.createElement('div');
                     loader.id = 'page-loader';
