@@ -15,8 +15,34 @@
         </div>
     </div>
 
+     <!--NAVBAR AREA-->
+
+     <nav class="topbar">
+         <div class="Circle" onClick="SettingsMenu()">
+            <img  class="SettingsImg" src="images/2035350-200.png">
+          </div> 
+
+          <div class="nav-divider"></div>
+
+          <button type="button" onclick="window.location.href='main.html'">🏠 Home</button>
+          <button type="button" onclick="window.location.href='Topic.html'">📖 Topic</button>
+          <button type="button" onclick="window.location.href='Opportunities.html'">✨ Opportunities</button>
+          <button type="button" onclick="window.location.href='Risks.html'">⚠️ Risks</button>  
+          <button type="button" onclick="window.location.href='Choices.html'">🔀 Choices</button>
+          <button type="button" onclick="window.location.href='References.html'">📚 References</button> 
+          <button type="button" onclick="window.location.href='Team_member.html'">👥 Team</button> 
+          <button type="button" onclick="window.location.href='Meeting.html'">📝 Minutes</button>    
+
+          <div class="nav-divider"></div>
+
+          <button class="funnyb" id="FrogButton" type="button" onclick="window.location.href='gerald.html'">do not click me heheh 🐸</button> 
+
+           <div class="WelcomeArea">
+            <h2 class="WelcomeText" id="WelcomeText"> </h2>
+        </div>
+     </nav>
+
     <header>
-        
         <div class="title-wrapper">
             <div class="scribble-underLine"></div>
             
@@ -26,48 +52,16 @@
         <p class="subtitle">~AI cars are Awsome~</p>
     </header>
         
-    <div class="topbar">  
-        
-        <div class="Circle" onClick="SettingsMenu()">
-            <img  class="SettingsImg" src="images/2035350-200.png">
-        </div> 
-        
-        
-        <div class="WelcomeArea">
-            <h2 class="WelcomeText" id="WelcomeText"> </h2>
-        </div>
-
-        
-    </div>
-        
-
+   
     <div class="Settings-Menu" id="SettingsMenu">
         <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
-        <button class="no-loader" onClick="Frog()">No Frog Button(i don't like frogs)</button>
+        <button class="no-loader" onClick="FrogB()"> I likw Frogws 🐸</button>
     </div>
 
-    <div class="Roles">
-            <h3>📋 Roles</h3>
-        <p>
-            <span class="role-tag">📌 Tanishka</span> Rearcher/ editer <br>
-            <span class="role-tag">📌 Thu</span> Rearcher / editer <br>
-            <span class="role-tag">📌 Ruderaksh</span> wizard 🧙  
-        </p>
-    </div>
+    
 
     <div class="mainLayout">
-        <div class="buttonArea">
-            <p class="btnLabel">~Pages~</p>
-            <button class="funnyb" id="FrogButton" type="button" onclick="window.location.href='gerald.html'">do not click me heheh 🐸</button> 
-            <button type="button" onclick="window.location.href='main.html'">Home Page</button>
-            <button type="button" onclick="window.location.href='Topic.html'">Topic</button>
-            <button type="button" onclick="window.location.href='Opportunities.html'">Opportunities</button>
-            <button type="button" onclick="window.location.href='Risks.html'">Risks</button>  
-            <button type="button" onclick="window.location.href='Choices.html'">Choices</button>
-            <button type="button" onclick="window.location.href='References.html'">References</button> 
-            <button type="button" onclick="window.location.href='Team_member.html'">Team Member</button> 
-            <button type="button" onclick="window.location.href='Meeting.html'">Meeting Minutes</button>    
-        </div>
+       
 
 
         <div class="topicColume">
@@ -97,8 +91,8 @@
                
             }
 
-            function Frog() {
-            document.getElementById('FrogButton').style.display = "none";
+            function FrogB() {
+            document.getElementById('FrogButton').classList.toggle('open');
             }
 
 
