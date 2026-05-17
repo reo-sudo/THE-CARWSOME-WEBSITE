@@ -47,6 +47,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    cursor: url('images/frog.png'), auto;
 
     /* line paper background */
     background-image:
