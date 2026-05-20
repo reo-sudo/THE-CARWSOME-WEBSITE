@@ -47,7 +47,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
-    cursor: url('images/frog.png'), auto;
+    cursor: url('') 16 16, auto !important;
 
     /* line paper background */
     background-image:
@@ -61,6 +61,11 @@ body {
     
 }
 
+/* Frog Eating A Fly - https://www.cursors-4u.com/cursor/nat42 */
+* {
+  cursor: url('https://cdn.cursors-4u.net/css-previews/frog-eating-a-fly-32d7871e-css.webp') 0 0, auto !important;
+}
+/* End www.Cursors-4U.com Code */
 
 
 header {
