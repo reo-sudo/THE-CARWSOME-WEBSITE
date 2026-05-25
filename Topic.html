@@ -8,6 +8,37 @@
 </head>
 <body>
 
+    <nav class="topbar">
+         <div class="Circle" onClick="SettingsMenu()">
+            <img  class="SettingsImg" src="images/2035350-200.png">
+          </div> 
+
+          <div class="nav-divider"></div>
+
+          <button type="button" onclick="window.location.href='main.html'">🏠 Home</button>
+          <button type="button" onclick="window.location.href='Topic.html'">📖 Topic</button>
+          <button type="button" onclick="window.location.href='Opportunities.html'">✨ Opportunities</button>
+          <button type="button" onclick="window.location.href='Risks.html'">⚠️ Risks</button>  
+          <button type="button" onclick="window.location.href='Choices.html'">🔀 Choices</button>
+          <button type="button" onclick="window.location.href='References.html'">📚 References</button> 
+          <button type="button" onclick="window.location.href='Team_member.html'">👥 Team</button> 
+          <button type="button" onclick="window.location.href='Meeting.html'">📝 Minutes</button>    
+
+          <div class="nav-divider"></div>
+
+          <button class="funnyb" id="FrogButton" type="button" onclick="window.location.href='gerald.html'">do not click me heheh 🐸</button> 
+        
+            <div class="WelcomeArea">
+            <h2 class="WelcomeText" id="WelcomeText"> </h2>
+        </div>
+        
+        <div class="Settings-Menu" id="SettingsMenu">
+            <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
+            <button class="no-loader" onClick="FrogB()"> I like Frogws 🐸</button>
+            <button class="no-loader"> Frog cursor </button>
+        </div>
+     </nav>
+     
     <div id="page-loader">
         <div class="loader-box">Vroom...</div>
         <div class="loader-dots">
@@ -21,7 +52,7 @@
             <h1 class="Title">Technology/Topic</h1>
             <div class="scribble-underLine"></div>
         </div>
-        <p class="subtitle">~Add more research Here~</p>
+        <p class="subtitle">~AI in Transportation~</p>
     </header>
 
     <div class="hamsterA">
@@ -29,20 +60,50 @@
     </div>
 
     <div class="topicColume">
-        <div class="Topic">
-            <img class="None" src="None" alt="car" align="left">
+        <div class="Topic" style="margin: 20px;">
             <br>
-            <p>  Add text Here</p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
+            <p style="text-indent: 20px;">Artificial intelligence is becoming increasingly integrated into modern society and is now being used in many industries to improve automation and decision-making. One major area where AI is rapidly developing is transportation, particularly through autonomous vehicles, also known as self-driving cars. These vehicles use technologies such as AI, sensors, GPS, and LiDAR systems to operate with minimal human control.</p>
+            <p style="text-indent: 20px;">Our group chose this topic because autonomous vehicles are one of the clearest examples of how artificial intelligence can directly impact people’s everyday lives.  Autonomous vehicles are also expected to influence industries such as logistics, ride-sharing, public transport, and urban planning. As this technology continues to develop, it raises important social and ethical questions surrounding safety, privacy, employment, accessibility, and AI decision-making. </p>
+    </div>
+
+    <div class="topicColume">
+        <div class="Topic" style="background-color:#b3d9ff ;margin: 20px;">
+            <br>
+            <p><strong style="font-size: 25px;"> What are Autonomous Vehicles?: </strong></p>
+            <p style="text-indent: 20px;">Autonomous vehicles (also known as AVs) use technology to replace certain parts that would normally require a human such as using AI in navigation to find the fastest route or breaking to avoid obstacles through the use of cameras and sensers.</p>
+            <p style="text-indent: 20px;"></p>
+            <p style="text-indent: 20px;"></p>
+        </div>
+    </div>
+
+    <div class="topicColume">
+        <div class="Topic" style="background-color:#b3d9ff ;margin: 20px;">
+            <br>
+            <p><strong style="font-size: 25px;"> </strong></p>
+            <p style="text-indent: 20px;"> </p>
+            <p style="text-indent: 20px;"></p>
+            <p style="text-indent: 20px;"></p>
         </div>
     </div>
 
     <a class="backButton" href="main.html">Back</a>
 
     <script>
+
+        let username = localStorage.getItem("username");
+
+        document.getElementById("WelcomeText").innerText =
+            "Welcome! " + username;
+
+
+            function SettingsMenu() {
+               document.getElementById('SettingsMenu').classList.toggle('open');
+               
+            }
+
+            function FrogB() {
+            document.getElementById('FrogButton').classList.toggle('open');
+            }
 
         window.addEventListener('load', () => {
                 const loader = document.getElementById('page-loader');
