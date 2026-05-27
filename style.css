@@ -694,3 +694,92 @@ h2 {
 
 
 }
+
+.team-grid {
+    display: flex;
+    gap: 28px;
+    margin: 28px 32px 48px;
+    flex-wrap: wrap;
+}
+
+.Memeber-card {
+    flex: 1 1 200px;
+    border: 3px solid var(--ink);
+    border-radius: 4px 18px 4px 18px / 18px 4px 18px 4px;
+    box-shadow: 6px 6px 0 var(--ink);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Memeber-card:nth-child(1) {
+    background: var(--accent-pink); 
+}
+
+.Memeber-card:nth-child(2) {
+    background: var(--accent-blue); 
+
+}
+
+.Memeber-card:nth-child(3) {
+    background: var(--accent-green); 
+
+}
+
+.Memeber-card:hover {
+    transform: translate(-3px, -4px);
+    box-shadow: 9px 9px 0 var(--ink);
+}
+
+.memeber-photo {
+    width: 100%; 
+    aspect-ratio: 4/3;
+    background: rgba(0,0,0,.08);
+    border-bottom: 3px solid var(--ink);
+    display:grid;
+    place-items:center;
+    font-size: 3.5rem;
+}
+
+.member-body {
+    padding: 16px 20px 20px;
+}
+
+.member-cat {
+    font-size: .8rem;
+    color:#555;
+    text-transform: uppercase;
+    margin-bottom:5px;
+}
+
+.member-name { 
+    font-size:1.5rem;
+    font-weight: 700;
+    border-bottom:2px dashed var(--ink);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.member-body p {
+    font-size:.9rem; 
+    line-height:1.9;
+}
+
+.page-pill {
+    display:inline-block;
+    background:rgba(255,255,255,.5);
+    border:1.5px solid var(ink);
+    border-radius: 2px 8px 2px 8px / 8px 2px 8px 2px;
+    font-size:.78rem;
+    padding: 2px 8px;
+    margin: 2px 2px 0 0;
+    box-shadow:1px 1px 0 var(--ink);
+
+}
+
+.pages {
+    margin-top:10px;
+    padding-top: 8px;
+    border-top: 1.5px dashed rgba(0,0,0.2);
+    font-size:.78rem;
+    color:#555;
+}
