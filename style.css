@@ -789,3 +789,31 @@ h2 {
     font-size:.78rem;
     color:#555;
 }
+
+/* TWO COLUMN LAYOUT */
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 92%;
+    margin: auto;
+    align-items: start;
+}
+
+.left-column,
+.right-column{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px){
+
+    .content-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
