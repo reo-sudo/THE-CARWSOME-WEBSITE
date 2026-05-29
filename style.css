@@ -817,3 +817,39 @@ h2 {
     }
 
 }
+
+/* MAIN SECTION WRAPPER */
+.section-group {
+    width: 95%;
+    margin: 40px auto;
+}
+
+/* LARGE CATEGORY CARD */
+.section-main {
+    width: 80%;
+    margin: 0 auto 25px auto;
+}
+
+/* 3 CARD GRID UNDERNEATH */
+.subtopic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Makes cards equal height */
+.subtopic-grid .Topic {
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .subtopic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-main {
+        width: 100%;
+    }
+}

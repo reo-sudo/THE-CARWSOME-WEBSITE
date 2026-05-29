@@ -8,10 +8,13 @@
 </head>
 <body>
 
-       <nav class="topbar">
-         
+    <nav class="topbar">
+        <div class="Circle" onClick="SettingsMenu()">
+            <img  class="SettingsImg" src="images/2035350-200.png">
+          </div>      
 
           <div class="nav-divider"></div>
+          <button type="button" onclick="window.location.href='main.html'">🏠Home</button>
           <button type="button" onclick="window.location.href='Topic.html'">📖 Topic</button>
           <button type="button" onclick="window.location.href='Opportunities.html'">✨ Opportunities</button>
           <button type="button" onclick="window.location.href='Risks.html'">⚠️ Risks</button>  
@@ -28,23 +31,22 @@
             <h2 class="WelcomeText" id="WelcomeText"> </h2>
         </div>
      </nav>
-
-     
-    <div id="page-loader">
-        <div class="loader-box">Vroom...</div>
-        <div class="loader-dots">
-            <span></span><span></span><span></span>
-        </div>
-    </div>
+    
     
     <header>
         <div class="title-wrapper">
             <div class="scribble-underLine"></div>
-            <h1 class="Title">Technology/Topic</h1>
+            <h1 class="Title">Opportunities</h1>
             <div class="scribble-underLine"></div>
         </div>
-        <p class="subtitle">~AI in Transportation~</p>
+        <p class="subtitle">~Add more Research Here~</p>
     </header>
+
+    <div class="Settings-Menu" id="SettingsMenu">
+        <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
+        <button class="no-loader" onClick="FrogB()"> I like Frogws 🐸</button>
+        <button class="no-loader"> Frog cursor </button>
+    </div>
 
     <div class="hamsterA">
      
@@ -165,27 +167,27 @@
 
             function FrogB() {
             document.getElementById('FrogButton').classList.toggle('open');
-            }
+            }    
 
-        window.addEventListener('load', () => {
-                const loader = document.getElementById('page-loader');
-                setTimeout(() => {
-                    loader.classList.add('fade-out');
-                    setTimeout(() => loader.remove(), 300);
-                }, 500)
-            });
-
-            document.querySelectorAll('a, button[onclick]').forEach(el => {
-                el.addEventListener('click', () => {
-                    const loader = document.createElement('div');
-                    loader.id = 'page-loader';
-                    loader.innerHTML = `
-                    <div class="loader-box">Vroom...</div>
-                    <div class="loader-dots"><span></span><span></span><span></span></div>
-                    `;
-                    document.body.appendChild(loader);
+            window.addEventListener('load', () => {
+                    const loader = document.getElementById('page-loader');
+                    setTimeout(() => {
+                        loader.classList.add('fade-out');
+                        setTimeout(() => loader.remove(), 300);
+                    }, 500)
                 });
-            });
+
+                document.querySelectorAll('a, button[onclick]:not(.no-loader)').forEach(el => {
+                    el.addEventListener('click', () => {
+                        const loader = document.createElement('div');
+                        loader.id = 'page-loader';
+                        loader.innerHTML = `
+                        <div class="loader-box">Vroom...</div>
+                        <div class="loader-dots"><span></span><span></span><span></span></div>
+                        `;
+                        document.body.appendChild(loader);
+                    });
+                });
 
     </script>
    
