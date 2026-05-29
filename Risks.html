@@ -16,7 +16,9 @@
     </div>
      
     <nav class="topbar">
-         
+        <div class="Circle" onClick="SettingsMenu()">
+            <img  class="SettingsImg" src="images/2035350-200.png">
+          </div>      
 
           <div class="nav-divider"></div>
           <button type="button" onclick="window.location.href='main.html'">🏠Home</button>
@@ -36,7 +38,7 @@
             <h2 class="WelcomeText" id="WelcomeText"> </h2>
         </div>
      </nav>
-
+    
     
     <header>
         <div class="title-wrapper">
@@ -44,8 +46,18 @@
             <h1 class="Title">Risks</h1>
             <div class="scribble-underLine"></div>
         </div>
+<<<<<<< HEAD
         <p class="subtitle">~AT cars have many potential risks in society and Ethics</p>
+=======
+        <p class="subtitle">~AVs also have potential risks~</p>
+>>>>>>> e70d7c8d4432f4fab284d3f80de12c9b2ecad6a4
     </header>
+
+    <div class="Settings-Menu" id="SettingsMenu">
+        <p class="btnLabelSet"> ⚙️ ~settings MENU~ 🔧</p>
+        <button class="no-loader" onClick="FrogB()"> I like Frogws 🐸</button>
+        <button class="no-loader"> Frog cursor </button>
+    </div>
 
     <div class="hamsterA">
      
@@ -53,7 +65,6 @@
 
     <div class="topicColume">
         <div class="Topic" style="margin: 20px;">
-            <img class="None" src="None" alt="car" align="left">
             <br>
             <p><strong style="font-size: 25px;">1. Safety &amp; Ethical Risks: </strong></p>
             <p style="text-indent: 20px;">AVs introduce new safety concerns, including less cautious behavior from occupants and road users, system errors, and the lack of clear regulations for “crash algorithms” that determine life-or-death decisions in unavoidable accidents caused by human error, machine errors, and their unpredictable nature remain challenges.</p>
@@ -65,7 +76,10 @@
     </div>
     <div class="topicColume">
         <div class="Topic" style="background-color:#b3d9ff ;margin: 20px;">
+<<<<<<< HEAD
             
+=======
+>>>>>>> e70d7c8d4432f4fab284d3f80de12c9b2ecad6a4
             <br>
             <p><strong style="font-size: 25px;">2. Privacy &amp; Cybersecurity Risks: </strong></p>
             <p style="text-indent: 20px;">The remarkable concern is about data collection. The rise of Avs brings privacy risks related to data storage and transmission, and unauthorized third-party access (Alam, 2024). Due to the massive volumes of highly sensitive data these vehicles used, including personal information, real-time location tracking, Face ID, cabin audio, bank account, and many more data be used in this system. A major privacy risk stems from the fact that the vehicle captures data not just from the owner, but from external data subjects, including passengers, children, pedestrians, and cyclists. This continuous data collection creates a risk of unauthorized surveillance, corporate data monetization, and permanent digital profiling if the data is intercepted or poorly governed.</p>
@@ -89,27 +103,42 @@
     </div>
    
 
-    <script>
+<script>
 
-        window.addEventListener('load', () => {
-                const loader = document.getElementById('page-loader');
-                setTimeout(() => {
-                    loader.classList.add('fade-out');
-                    setTimeout(() => loader.remove(), 300);
-                }, 500)
-            });
+        let username = localStorage.getItem("username");
 
-            document.querySelectorAll('a, button[onclick]').forEach(el => {
-                el.addEventListener('click', () => {
-                    const loader = document.createElement('div');
-                    loader.id = 'page-loader';
-                    loader.innerHTML = `
-                    <div class="loader-box">Vroom...</div>
-                    <div class="loader-dots"><span></span><span></span><span></span></div>
-                    `;
-                    document.body.appendChild(loader);
+        document.getElementById("WelcomeText").innerText =
+            "Welcome! " + username;
+
+
+            function SettingsMenu() {
+               document.getElementById('SettingsMenu').classList.toggle('open');
+               
+            }
+
+            function FrogB() {
+            document.getElementById('FrogButton').classList.toggle('open');
+            }    
+
+            window.addEventListener('load', () => {
+                    const loader = document.getElementById('page-loader');
+                    setTimeout(() => {
+                        loader.classList.add('fade-out');
+                        setTimeout(() => loader.remove(), 300);
+                    }, 500)
                 });
-            });
+
+                document.querySelectorAll('a, button[onclick]:not(.no-loader)').forEach(el => {
+                    el.addEventListener('click', () => {
+                        const loader = document.createElement('div');
+                        loader.id = 'page-loader';
+                        loader.innerHTML = `
+                        <div class="loader-box">Vroom...</div>
+                        <div class="loader-dots"><span></span><span></span><span></span></div>
+                        `;
+                        document.body.appendChild(loader);
+                    });
+                });
 
     </script>
    
